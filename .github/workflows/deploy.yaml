@@ -5,10 +5,6 @@ on:
     workflows: ["Versioning Workflow"]
     types:
       - completed
-  # Runs on pushes targeting the `main` branch. Change this to `master` if you're
-  # using the `master` branch as the default branch.
-  push:
-    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -47,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Build with VitePress
+      - name: Build with Vite
         run: bun run build
 
       - name: Upload artifact
